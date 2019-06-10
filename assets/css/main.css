@@ -19,9 +19,30 @@ html {
 
 *, *:before, *:after {
   box-sizing: inherit; }
+.inner.content.p {
+  font-size: 20px;
+}
+p2{
+  font-size: 20px;
+  text-align-last: center;
+}
+.content.p2{
+  text-align: center;
+}
+
+b1{
+  color: #003153;
+  font-size: 20px;
+  ;
+}
+b2{ 
+  font-size: 18px;
+
+}
   header img{
     margin-top: 7PX;
     width: 200px;
+    color: #fff;
   }
   .tituloAlta {
     text-align: center;
@@ -2568,6 +2589,7 @@ body {
 #imagenMedio{
   width: 700px;
 }
+business-3224643_1920
 #heading2
 {-ms-flex-align: center;
   -ms-flex-pack: center;
@@ -2598,6 +2620,35 @@ body {
   text-align: center;
   width: 100%; 
 }
+#heading3 {
+  -ms-flex-align: center;
+  -ms-flex-pack: center;
+  background-color: #111111;
+  color: rgba(255, 255, 255, 0.5);
+  -moz-align-items: center;
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -moz-justify-content: center;
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  background-image: linear-gradient(rgba(0, 19.22, 32.55, 0.623), rgba(0, 19.22, 32.55, 0.87)), url("../../images/business-3224643_1920.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top: 0;
+  display: -ms-flexbox;
+  height: 15rem !important;
+  min-height: 15rem;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  width: 100%; }
 #heading {
   -ms-flex-align: center;
   -ms-flex-pack: center;
@@ -2817,7 +2868,6 @@ body {
     #heading .testimonials .content .credit strong {
       color: #ce1b28; }
   #heading:before {
-    background: linear-gradient(135deg, #015a70 0%, #038b85 60%);
     content: ' ';
     display: block;
     height: 100%;
