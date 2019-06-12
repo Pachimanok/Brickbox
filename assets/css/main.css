@@ -24,19 +24,12 @@ html {
 }
 p2{
   font-size: 20px;
-  text-align-last: center;
-}
-.content.p2{
   text-align: center;
-}
+} 
 
 b1{
   color: #003153;
   font-size: 20px;
-  ;
-}
-b2{ 
-  font-size: 18px;
 
 }
   header img{
@@ -83,6 +76,10 @@ b2{
     background:#111111;
     padding:20px 20px; #000;
     color:#111111;
+  }
+  .inner .content h2{
+    text-align: center;
+    color: #003153;
   }
   
   .footer{
