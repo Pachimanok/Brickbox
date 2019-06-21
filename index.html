@@ -8,6 +8,8 @@
 	<head>
 		<title>BrickBox</title>
 		<meta charset="utf-8" />
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="contact_form.js"></script>
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
@@ -129,16 +131,17 @@
 				<p>Dejanos tus datos y te contactamos en breves</p>
 			</header>
 		
-		<form method="post" action="#">
+		<form id="form">
+			<p id ="returnmessage"></p>
 			<div class="row gtr-uniform">
 				<div class="col-6 col-12-xsmall">
-					<input type="text" name="name" id="name" value="" placeholder="Name" />
+					<input type="text" name="name" id="name" placeholder="Name" />
 				</div>
 				<div class="col-6 col-12-xsmall">
-					<input type="email" name="email" id="email" value="" placeholder="Email" />
+					<input type="email" name="email" id="email" placeholder="Email" />
 				</div>
 				<div class="col-6 col-12-xsmall">
-					<input type="tel" name="tel" id="Tel" value="" placeholder="Celular" />
+					<input type="tel" name="tel" id="contact" placeholder="Celular" />
 				</div>
 				<!-- Break -->
 				<div class="col-12">
@@ -156,12 +159,12 @@
 				</div>
 				
 				<div class="col-12">
-					<textarea name="textarea" id="textarea" placeholder="Escribe tu Mensaje" rows="6"></textarea>
+					<textarea name="textarea" id="message" placeholder="Escribe tu Mensaje" rows="6"></textarea>
 				</div>
 				<!-- Break -->
 				<div class="col-12">
 					<ul class="actions">
-						<li><input type="submit" value="Enviar" class="primary" /></li>
+						<li><input type="button" id="submit" value="Enviar" class="primary" /></li>
 					</ul>
 				</div>
 			</div>
