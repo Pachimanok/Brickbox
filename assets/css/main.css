@@ -24,19 +24,12 @@ html {
 }
 p2{
   font-size: 20px;
-  text-align-last: center;
-}
-.content.p2{
   text-align: center;
-}
+} 
 
 b1{
   color: #003153;
   font-size: 20px;
-  ;
-}
-b2{ 
-  font-size: 18px;
 
 }
   header img{
@@ -83,6 +76,10 @@ b2{
     background:#111111;
     padding:20px 20px; #000;
     color:#111111;
+  }
+  .inner .content h2{
+    text-align: center;
+    color: #003153;
   }
   
   .footer{
@@ -2737,6 +2734,35 @@ business-3224643_1920
       width: 100%;
       margin-bottom: 30px;
       opacity: 0.9; }
+      #headingMediopp{
+        -ms-flex-align: center;
+        -ms-flex-pack: center;
+        -moz-align-items: center;
+        -webkit-align-items: center;
+        -ms-align-items: center;
+        align-items: center;
+        display: -moz-flex;
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        -moz-justify-content: center;
+        -webkit-justify-content: center;
+        -ms-justify-content: center;
+        justify-content: center;
+        background-image:  url("../../images/proppyme.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-top: 0;
+        display: -ms-flexbox;
+        height: 30rem !important;
+        min-height: 15rem;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+        width: 100%;
+        margin-bottom: 30px;
+        opacity: 0.9; }
   #heading input, #heading select, #heading textarea {
     color: #ffffff; }
   #heading a {
