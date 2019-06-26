@@ -1,5 +1,6 @@
 <?php
 // Fetching Values from URL.
+
 $name = $_POST["name1"];
 $email = $_POST["email1"];
 $message = $_POST["message1"];
@@ -10,30 +11,23 @@ if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
 	if (!preg_match("/^[0-9]{10}$/", $contact)) {
 		echo "<span>* Please Fill Valid Contact No. *</span>";
 	} else {
-		$subject = $name;
-		// To send HTML mail, the Content-type header must be set.
-		$headers = 'MIME-Version: 1.0' . "rn";
-		$headers .= 'Content-type: text/html; charset=iso-8859-1' . "rn";
-		$headers .= 'From:' . $email. "rn"; // Sender's Email
-		$headers .= 'Cc:' . $email. "rn"; // Carbon copy to Sender
-		$template = '<div style="padding:50px; color:white;">Hello ' . $name . ',<br/>'
-		. '<br/>Thank you...! For Contacting Us.<br/><br/>'
-		. 'Name:' . $name . '<br/>'
-		. 'Email:' . $email . '<br/>'
-		. 'Contact No:' . $contact . '<br/>'
-		. 'Message:' . $message . '<br/><br/>'
-		. 'This is a Contact Confirmation mail.'
-		. '<br/>'
-		. 'We Will contact You as soon as possible .</div>';
-		$sendmessage = "<div>" . $template . "</div>";
-		// Message lines should not exceed 70 characters (PHP rule), so wrap it.
-		$sendmessage = wordwrap($sendmessage, 70);
 		// Send mail by PHP Mail Function.
-		if (mail("lauragadea@gmail.com", $subject, $sendmessage, $headers)){
-			echo "Gracias por enviar el mensaje. Pronto nos contactaremos con usted.";	
+		$message = "Line 1\r\nLine 2\r\nLine 3";
+
+		// In case any of our lines are larger than 70 characters, we should use wordwrap()
+		$message = wordwrap($message, 70, "\r\n");
+		if (mail('lauragadea.cme@gmail.com', 'Asunto', $message)){
+			echo "prueba enviada";
 		} else {
-			echo "mail function failed";
+			echo "prueba no enviada";
 		}
+
+		// if (mail("lauragadea@gmail.com", $subject, $sendmessage, $headers)){
+		// 	echo "Gracias por enviar el mensaje. Pronto nos contactaremos con usted.";
+		// } else {
+		// 	echo "mail function failed";
+		// 	var_dump(debug_backtrace());
+		// }
 	}
 } else {
 	echo "<span>* invalid email *</span>";
