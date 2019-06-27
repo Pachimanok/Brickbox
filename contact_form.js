@@ -9,19 +9,10 @@ $("#returnmessage").empty(); // To empty previous error/success message.
 if (name == '' || email == '' || contact == '') {
 alert("Por favor complete los campos requeridos");
 } else {
-// Returns successful data submission message when the entered information is stored in database.
-$.post("contact_form.php", {
-name1: name,
-email1: email,
-message1: message,
-contact1: contact
-}, function(data) {
-	alert("inside post function in js");
-$("#returnmessage").append(data); // Append returned message to message paragraph.
-if (data == "Gracias por enviar el mensaje. Pronto nos contactaremos con usted.") {
+
+alert("Gracias por enviar el mensaje, pronto nos contactaremos con usted")
 $("#form")[0].reset(); // To reset form fields on success.
-}
-});
+
 }
 });
 });
